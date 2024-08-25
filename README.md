@@ -29,5 +29,8 @@ Este projeto consiste em um decodificador de texto, onde você pode inserir um t
 - `styles.css`: Contém o CSS para estilizar a interface.
 - `script.js`: Contém a lógica JavaScript para criptografia, descriptografia e funcionalidades de copiar.
 
+Link do app pra testar: 
+https://decodificador-texto-eight.vercel.app/
+
 Contato
 [Linkedin](https://www.linkedin.com/in/lviniciusbdzn/)
