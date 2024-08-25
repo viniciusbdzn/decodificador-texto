@@ -169,6 +169,17 @@ body {
     padding: 1%;
     text-align: center;
     background-color: var(--cor-primaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.texto__rodape {
     font-family: var(--fonte-primaria);
     color: #FFFFFF;
+}
+
+.link__contato {
+    align-self: center;
 }
