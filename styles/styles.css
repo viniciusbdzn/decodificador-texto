@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --cor-primaria: #0A3871;
+    --cor-de-fundo: #F3F5FC;
+    --fonte-primaria: "Inter", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--cor-de-fundo);
+}
+
+.alura__logo {
+    position: absolute;
+    margin: 3% 5%;
+}
+
+.decodificador__texto{
+    width: 100%;
+    max-width: 600px;
+    position: absolute;
+    margin: 12% 10% 10% 17%;
+    border: none;
+    outline: none;
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-primaria);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    color: var(--cor-primaria);
+    line-height: 150%;
+    flex-wrap: nowrap;
+    resize: none;
+    overflow: hidden;
+}
+
+.decodificador__texto::placeholder {
+    color: var(--cor-primaria);
+    font-weight: 400;
+    line-height: 48px;
+}
+
+.area__botoes {
+    margin: 58% 10% 0% 15%;
+    bottom: 15vh;
+    gap: 20px;
+    position: absolute;
+}
+
+.texto__aviso {
+    margin: 2%;
+    font-size: 0.75em;
+    color: #495057;
+}
+
+.icone__exclamacao {
+    width: 16px;
+    vertical-align: middle;
+}
+
+.botao {
+    height: 8vh;
+    width: 18vw;
+    border-radius: 20px;
+    font-family: var(--fonte-primaria);
+}
+
+#botao__criptografar {
+    border: 0px;
+    color: #FFFFFF;
+    background-color: var(--cor-primaria);
+    
+}
+
+#botao__descriptografar {
+    color: var(--cor-primaria);
+    border: var(--cor-primaria) solid 1px;
+    background-color: #D8DFE8;
+}
+
+.area__decodificacao {
+    margin: 2% 2% 2% 72%;
+    bottom: 8vh;
+    height: 80vh;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    word-wrap: break-word; /* Quebra palavras longas */
+    white-space: normal;
+}
+
+.imagem__personagem {
+    margin: 20%;
+}
+
+.notificacao__texto, .texto__decodificado {
+    font-family: var(--fonte-primaria);
+    color: #343A40;
+}
+
+.notificacao__texto {
+    font-size: 1.5em;
+    text-align: center;
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+   
+}
+
+.texto__decodificado {
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 1em;
+    color: #495057;
+    margin: 5%;
+    padding: 5%;
+    font-family: var(--fonte-primaria);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.botao__oculto {
+    display: none;
+}
+
+#botao__copiar {
+    margin: 20% 18%;
+    padding: 5%;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #F3F5FC;
+    font-family: var(--fonte-primaria);
+    color: #343A40;
+}
+
+.decodificador__texto::placeholder, .texto__decodificado::placeholder {
+    transition: color 0.3s ease; /* Transição suave para o desaparecimento */
+}
+
+.decodificador__texto:focus::placeholder, .texto__decodificado:focus::placeholder {
+    color: transparent; /* Mantém o placeholder transparente quando o campo está em foco */
+}
+
+.rodape {
+    padding: 1%;
+    text-align: center;
+    background-color: var(--cor-primaria);
+    font-family: var(--fonte-primaria);
+    color: #FFFFFF;
+}

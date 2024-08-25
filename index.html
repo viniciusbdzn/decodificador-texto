@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador de Texto</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    
+</head>
+<body>
+    <main>
+        <header>
+            <img class="alura__logo" src="/assets/logo.png" alt="logo da Alura">
+        </header>
+            <textarea class="decodificador__texto" type="text" placeholder="Digite seu texto"></textarea>
+            <section class="area__botoes">
+                <p class="texto__aviso"> 
+                    <img class="icone__exclamacao" src="assets/simbolo-exclamacao.png" alt="imagem de um simbolo de exclamação"> Apenas letras minúsculas e sem acento.
+                </p>
+                <button class="botao" id="botao__criptografar" type="button" onclick="criptografarTexto()">Criptografar</button>
+                <button class="botao" id="botao__descriptografar" type="button" onclick="descriptografarTexto()">Descriptografar</button>
+            </section>
+            <section class="area__decodificacao">
+                <img class="imagem__personagem" src="/assets/imagem-personagem.png" alt="imagem do personagem da alura">
+                <p class="notificacao__texto">Nenhuma mensagem encontrada</p>
+                <p class="texto__decodificado" name="texto">Insira um texto que você deseja criptografar ou descriptografar</p>
+                <button class="botao__oculto" id="botao__copiar" type="button">Copiar</button>
+            </section>
+            
+    </main>
+    <footer class="rodape">Criado por Luiz Vinicius Badazoni - 2024</footer>
+    <script src="/scripts/script.js"></script>
+</body>
+</html>
