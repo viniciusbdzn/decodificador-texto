@@ -1,17 +1,25 @@
 document.addEventListener('DOMContentLoaded', function() {
     let textoExibido = document.getElementsByClassName('notificacao__texto')[0];
     let textoAviso = document.getElementsByClassName('texto__aviso')[0];
+    const elemento = document.getElementById('botao__copiar');
     
-    
-    document.getElementById('botao__criptografar').addEventListener('click', function() {
-        const elemento = document.getElementById('botao__copiar');
-        elemento.classList.toggle('botao__oculto'); // Alterna a classe 'hidden'
-    });
+    let jaFoiExibido = false; // Flag para controlar a visibilidade
+        function mostrarUmaVez() {
+            
+            if (!jaFoiExibido) {
+                elemento.classList.remove('botao__oculto'); // Remove a classe para tornar o elemento visível
+                jaFoiExibido = true;
+        }
+    }
+
+
+
 
     document.getElementById('botao__copiar').addEventListener('click', function() {
         // Seleciona o elemento de texto
         const texto = document.getElementsByClassName('notificacao__texto')[0].innerText;
-    
+        
+        
         // Usa a API Clipboard para copiar o texto
         navigator.clipboard.writeText(texto).then(() => {
             alert('Texto copiado para a área de transferência!');
@@ -51,6 +59,7 @@ function criptografarTexto() {
                         .replace(/u/g, "ufat");
 
         textoExibido.innerHTML = textoCriptografado;
+        mostrarUmaVez()
         return textoCriptografado;
     }
 
