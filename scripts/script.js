@@ -30,8 +30,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     function validarTexto(texto) {
-        if (!/^[a-z\s]+$/.test(texto)) {
-            return alert("Apenas letras minúsculas e sem acento.");
+        
+        if (!/^[a-z\s]+$/.test(texto) || texto === '') {
+            return alert("Não é permitido espaço vazio, letras minúsculas e acentos.");
         }
         return null;
     };
@@ -49,7 +50,7 @@ function criptografarTexto() {
     
     document.getElementsByClassName("imagem__personagem")[0].style.display = "none";
     document.getElementsByClassName("texto__decodificado")[0].style.display = "none";
-    
+    document.getElementsByClassName('decodificador__texto')[0].value = "";
     
         let textoCriptografado = 
             textoString.replace(/e/g, "enter")
@@ -76,8 +77,8 @@ function descriptografarTexto() {
 
     document.getElementsByClassName("imagem__personagem")[0].style.display = "none";
     document.getElementsByClassName("texto__decodificado")[0].style.display = "none";
-
-
+    document.getElementsByClassName('decodificador__texto')[0].value = "";
+    
     // Mapeamento de substituições para descriptografar
     const mapeamento = {
         "enter": "e",

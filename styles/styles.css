@@ -78,23 +78,33 @@ body {
 }
 
 .botao {
-    height: 8vh;
+    height: 7vh;
     width: 18vw;
     border-radius: 20px;
     font-family: var(--fonte-primaria);
 }
 
 #botao__criptografar {
-    border: 0px;
+    border: none;
+    box-shadow: none;
     color: #FFFFFF;
     background-color: var(--cor-primaria);
-    
+}
+
+#botao__criptografar:hover {
+    box-shadow: inset 0 0 0 25px #2759c5bd;
+    cursor: pointer;
 }
 
 #botao__descriptografar {
     color: var(--cor-primaria);
     border: var(--cor-primaria) solid 1px;
     background-color: #D8DFE8;
+}
+
+#botao__descriptografar:hover {
+    box-shadow: inset 0 0 0 25px #337cdb48;
+    cursor: pointer;
 }
 
 .area__decodificacao {
@@ -152,9 +162,14 @@ body {
     padding: 5%;
     border-radius: 20px;
     text-align: center;
-    background-color: #F3F5FC;
     font-family: var(--fonte-primaria);
-    color: #343A40;
+    color: var(--cor-primaria);
+    border: var(--cor-primaria) 1px solid;
+    cursor: copy;
+}
+
+#botao__copiar:hover {
+    box-shadow: inset 0 0 0 25px #337cdb48;
 }
 
 .decodificador__texto::placeholder, .texto__decodificado::placeholder {
@@ -183,3 +198,5 @@ body {
 .link__contato {
     align-self: center;
 }
+
+
